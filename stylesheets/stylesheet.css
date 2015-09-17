@@ -243,3 +243,8 @@ a {
 @media screen and (max-width: 42em) {
   .site-footer {
     font-size: 0.9rem; } }
+
+footer.site-footer {
+  border-top: solid 14px #CCC;
+  font-style: italic;
+}
