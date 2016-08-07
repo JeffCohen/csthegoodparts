@@ -9,6 +9,11 @@ body {
   line-height: 1.5;
   color: #606c71; }
 
+.page-header a, .page-header a:visited {
+  color: white;
+  border-bottom: dotted 1px white;
+}
+
 a {
   color: #1e6bb8;
   text-decoration: none; }
