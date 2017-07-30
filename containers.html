@@ -65,20 +65,28 @@
 
         </header>
 
+        <div class="alert alert-danger">
+          <p><strong>This is a very early draft preview of the upcoming book.</strong></p>
+          <ul>
+            <li>All images and diagrams are missing</li>
+            <li>The content is incomplete</li>
+            <li>Many grammatical errors  exist</li>
+          </ul>
+        </div>
 
         <div class="row chapter">
-
-<p>Digital computing was invented in the 1940's, when physical computing devices (such as adding machines and simple calculators) were the state of the art.  </p>
-<p>Those devices were pre-wired to perform their function.  A calculator built to add and subtract integers, which would then transform itself into a machine that could also multiply and divide, would have sounded like some sort of dark magic.</p>
-<p>The invention of electronic programmability changed that worldview forever.  Computing machiens could be now pre-wired to follow instructions that would be provided later, electronically.</p>
-<p>Electronic data storage pioneered the age of software.  The days of "unitasker" computing devices were immediately numbered and the realm of computing took a giant leap forward. But soon it became clear that the art of organizing electronic data was not at all obvious.  </p>
-<p>How should data be organized?  Shoud all data be organized in the same way? Must the technique of storing data be connected to the manner in which that data will be used to perform the calculations? </p>
-<p>Over 70 years of such questions - and answers - have defined the data structures we use today.  </p>
-<p>A raw inventory of data structures is not helpful.  They can be found in any computer programming textbook worth it's weight in paper (or bandwidth).  </p>
-<p>But to be able to glimpse the insights that produced such structures in the first place is priceless.  The dual dedication to laws of both simplicity and power is one of the best parts of the tradition of computer science.  </p>
+          <div class="col-sm-8 col-sm-offset-2">
+<p>Digital computing was invented in the 1940's, when physical computing devices (such as adding machines and simple calculators) were the state of the art.
+Those devices were pre-wired to perform their function.  A calculator built to add and subtract integers, which would then transform itself into a machine that could also multiply and divide, would have sounded like some sort of dark magic.</p>
+<p>The invention of electronic programmability changed that worldview forever.  Computing machiens could be now pre-wired to follow instructions that would be provided later, electronically.
+Electronic data storage pioneered the age of software.  The days of "unitasker" computing devices were immediately numbered and the realm of computing took a giant leap forward. But soon it became clear that the art of organizing electronic data was not at all obvious.  </p>
+<p>How should data be organized?  Shoud all data be organized in the same way? Must the technique of storing data be connected to the manner in which that data will be used to perform the calculations?
+Over 70 years of such questions - and answers - have defined the data structures we use today.  </p>
+<p>A raw inventory of data structures is not helpful.  They can be found in any computer programming textbook worth it's weight in paper (or bandwidth).
+But to be able to glimpse the insights that produced such structures in the first place is priceless.  The dual dedication to laws of both simplicity and power is one of the best parts of the tradition of computer science.  </p>
 <p>This chapter aims to illuminate the fundamental structures that we still use today, and to make clear the utmost importance these structures have on modern computational architectures today.</p>
 
-## Memory Locations
+<h2>Memory Locations</h2>
 
 <p>The most fundamental of all data containers is the _memory location_.  This usually refers to the kind of electronic memory that's built into the computer circuitry, as opposed to hard drive storage or flash storage.</p>
 <p>A memory location was initially conceived by Alan Turing in his quest to invent a technique for computing devices to temporarily store certain numbers for a few moments, so that they could be retrieved later during a certain step of a process.</p>
@@ -130,19 +138,19 @@
 <p>Even arrays are not panaceas.  Access to any random element can now happen in a predictable fashion, but for array sizes are traditionally fixed - you can't grow the array beyond the initial size.  Some languages allow you to bypass this requirement, at the cost of additional time and memory if you choose to grow the array after its initial construction.</p>
 <p>Still, the advent of arrays made linked lists nearly obsolete for all but the lowest-level programming tasks.</p>
 
-## Queues
+<h2>Queues</h2>
 
-<p>Now that we've seen linked lists and arrays, a simple twist yields a most useful invention, the _queue_.  A queue has the added characteristic that new elements are added at one end of the list, but removed from the other.   Consider a line in the grocery store.  Customers enter at the back of the line, and are serviced at the front.
+<p>Now that we've seen linked lists and arrays, a simple twist yields a most useful invention, the _queue_.  A queue has the added characteristic that new elements are added at one end of the list, but removed from the other.   Consider a line in the grocery store.  Customers enter at the back of the line, and are serviced at the front.</p>
 
-<p>A queue does not offer access to any random element, so it is unlike an array. But it is often implemented by using an array and keeping track of the "front" and "back" indices, avoiding the slowness associated with linked lists.
+<p>A queue does not offer access to any random element, so it is unlike an array. But it is often implemented by using an array and keeping track of the "front" and "back" indices, avoiding the slowness associated with linked lists.</p>
 
-<p>There are actually three common queue flavors, which we will now look at.
+<p>There are actually three common queue flavors, which we will now look at.</p>
 
 <h3>FIFO</h3>
 
 <p>The _FIFO_ queue, short for "First In, First Out", is the kind of queue we typically find in the real world.  At the grocery store, boarding an airplane, driving to work - these are all FIFO queues in which the person to get in line first will be the first to be granted their freedom.</p>
 
-<p>Like all queues, only two primary operations exist:
+<p>Like all queues, only two primary operations exist:</p>
 
 <p>1. you can _push_ (i.e. add) a new element onto the end of the queue
 <p>2. you can _pop_ (i.e. remove) the front element from the queue
@@ -216,23 +224,23 @@
 
 <p>When we add the notion of direction to the graph, a number of interesting consequential properties can result:
 
-<p>1. An _directed acyclic graph_ is a directed graph in which no "loops" are possible.  Once you begin travelling from a particular node, you'll never get back to where you started.  Spreadsheets, source code version histories, certain types of electronic circuits, scheduling systems, and garbage collectors are examples of directed acyclic graphs.
-<p>2. A _weighted directed graph_ is a graph in which each edge is assigned a "weight" or value.  Weighted directed graphcs become very useful for real-time traffic analysis, transportation logistics planning, least-cost algorithms, and more.
+<p>1. An _directed acyclic graph_ is a directed graph in which no "loops" are possible.  Once you begin travelling from a particular node, you'll never get back to where you started.  Spreadsheets, source code version histories, certain types of electronic circuits, scheduling systems, and garbage collectors are examples of directed acyclic graphs.</p>
+<p>2. A _weighted directed graph_ is a graph in which each edge is assigned a "weight" or value.  Weighted directed graphcs become very useful for real-time traffic analysis, transportation logistics planning, least-cost algorithms, and more.</p>
 
 <h3> Neural Networks</h3>
 
-<p>Graphs are sometimes called _networks_ because they are often used to simulate the behavior of a flow network, whether it's a city's water pipe system, an electronic circuit, or a computer network.
+<p>Graphs are sometimes called _networks_ because they are often used to simulate the behavior of a flow network, whether it's a city's water pipe system, an electronic circuit, or a computer network.</p>
 
-<p>One type of network that's often used as an introduction to the field of artificial intelligence is the _neural network_.
+<p>One type of network that's often used as an introduction to the field of artificial intelligence is the _neural network_.</p>
 
-<p class="alert alert-notice">
+<div class="alert alert-danger">
   <strong>To Be Continued...</strong>
-</p>
+</div>
 
 
 
 
-
+</div>
         </div>
 
 
